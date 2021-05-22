@@ -1,0 +1,26 @@
+.listStyles {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background-color: #1d2c4d;
+    color: rgb(233, 222, 222);
+    width: 80%;
+    margin: auto;
+    padding: 0.3rem;
+    padding-right: 1.2rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 0.7rem;
+    position: relative;
+    word-break: break-word;
+}
+
+.delete {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.columnStyle {
+padding: 0;
+}
+
+.columnOne {
+    width: 30%;
+    border: 1px solid black;
+    background-color: #ec638d;
+}
+
+.columnTwo {
+    width: 30%;
+    border: 1px solid black;
+    background-color: #e9a551;
+}
+
+.columnThree {
+    width: 30%;
+    border: 1px solid black;
+    background-color: #04b85a;
+}
+
+.heading {
+    text-align: center;
+}
+
+.button {
+    margin-left: 1rem;
+    background-color: #8f7cf8;
+    padding: 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+
+
+

@@ -1,0 +1,21 @@
+.heading {
+    font-family: "Indie Flower", cursive;
+    font-size: 3rem;
+    display:inline-block;
+    margin:0 1rem;
+    vertical-align:bottom;
+}
+
+.logo {
+    height:100px;
+    width:100px;
+}
+
+.wrapper {
+    text-align: center;
+    margin: 2rem 0 2rem;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
