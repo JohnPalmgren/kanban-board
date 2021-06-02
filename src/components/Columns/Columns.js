@@ -1,9 +1,11 @@
 import Column from "./Column"
 import classes from "./Columns.module.css"
 
+
 const Columns = props => {
-    return (
-      <div className={classes.columnsStyles}>
+
+  return (
+    <div className={classes.columnsStyles}>
         <Column
           setColumnState={props.setColumnState}
           displayModal={props.displayModal}
@@ -12,6 +14,7 @@ const Columns = props => {
           type="toDo"
           delete={props.delete}
         />
+
         <Column
           setColumnState={props.setColumnState}
           displayModal={props.displayModal}
@@ -20,16 +23,15 @@ const Columns = props => {
           type="inProgress"
           delete={props.delete}
         />
+
         <Column
-          setColumnState={props.setColumnState}
-          displayModal={props.displayModal}
           input={props.done}
           title="Done"
           type="done"
           delete={props.delete}
         />
-      </div>
-    );
+    </div>
+  );
 };
 
 export default Columns;

@@ -1,6 +1,7 @@
 import classes from "./Card.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 const Card = props => {
 
   const clickHandler = () => {
@@ -8,11 +9,15 @@ const Card = props => {
   }
 
     return (
-      <div className={classes.card}>
-        <li className={classes.listStyles}>
-          {props.content}
-          <FontAwesomeIcon onClick={clickHandler} icon={["fas", "trash"]} className={classes.delete} />
-        </li>
+      <div className={classes.card} >
+            <div className={classes.listStyles}>
+              {props.content}
+              <FontAwesomeIcon
+                onClick={clickHandler}
+                icon={["fas", "trash"]}
+                className={classes.delete}
+              />
+            </div>
       </div>
     );
 };
