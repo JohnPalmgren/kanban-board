@@ -1,5 +1,6 @@
 import classes from "./Card.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Draggable } from "react-beautiful-dnd"
 
 
 const Card = props => {
@@ -9,7 +10,15 @@ const Card = props => {
   }
 
     return (
-      <div className={classes.card} >
+      <Draggable draggableId={props.id} index={props.index}>
+        {(provided) => (
+          <div
+            className={classes.card}
+            ref={provided.innerRef}
+            innerRef={provided.innerRef}
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+          >
             <div className={classes.listStyles}>
               {props.content}
               <FontAwesomeIcon
@@ -18,7 +27,9 @@ const Card = props => {
                 className={classes.delete}
               />
             </div>
-      </div>
+          </div>
+        )}
+      </Draggable>
     );
 };
 

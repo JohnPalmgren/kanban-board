@@ -10,7 +10,7 @@ const Modal = props => {
 
   const getUserInput = event => {
     event.preventDefault();
-    props.userInput({userInput:userInput, uid:Date.now()})
+    props.userInput({userInput:userInput, uid:Date.now().toString()})
   }
 
     return (

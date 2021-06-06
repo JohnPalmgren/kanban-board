@@ -1,11 +1,17 @@
 import Column from "./Column"
 import classes from "./Columns.module.css"
+import { DragDropContext } from "react-beautiful-dnd"
 
 
 const Columns = props => {
 
+  const onDragEnd = result => {
+    //reorder the column
+  }
+
   return (
     <div className={classes.columnsStyles}>
+      <DragDropContext onDragEnd={onDragEnd}>
         <Column
           setColumnState={props.setColumnState}
           displayModal={props.displayModal}
@@ -30,6 +36,7 @@ const Columns = props => {
           type="done"
           delete={props.delete}
         />
+      </DragDropContext>
     </div>
   );
 };

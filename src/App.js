@@ -27,6 +27,7 @@ function App() {
   const [done, setDone] = useState([]);
 
   const columnStateHandler = (column) => setCurrentColumn(column);
+
   const userInputHandler = (value) => {
     if(!value.userInput) {return} // could add style or error message here
     if (currentColumn === "toDo") {
