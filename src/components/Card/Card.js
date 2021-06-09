@@ -15,7 +15,6 @@ const Card = props => {
           <div
             className={classes.card}
             ref={provided.innerRef}
-            innerRef={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >

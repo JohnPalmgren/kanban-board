@@ -5,6 +5,8 @@ import DeleteModalDisplay from "./components/Modals/DeleteModalDisplay";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { DragDropContext } from "react-beautiful-dnd";
+
 
 library.add(fas);
 
@@ -98,6 +100,10 @@ function App() {
     setDelModalVisibility(false);
   };
 
+  const onDragEnd = (result) => {
+  };
+
+
   return (
     <div>
       <Heading />
@@ -115,14 +121,16 @@ function App() {
       ) : (
         <div></div>
       )}
-      <Columns
-        setColumnState={columnStateHandler}
-        displayModal={displayModal}
-        toDo={toDo}
-        inProgress={inProgress}
-        done={done}
-        delete={displayDelete}
-      />
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Columns
+          setColumnState={columnStateHandler}
+          displayModal={displayModal}
+          toDo={toDo}
+          inProgress={inProgress}
+          done={done}
+          delete={displayDelete}
+        />
+      </DragDropContext>
     </div>
   );
 }

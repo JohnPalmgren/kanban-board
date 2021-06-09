@@ -16,7 +16,6 @@ const Column = (props) => {
     <Droppable droppableId={props.type}>
       {(provided) => (
         <div
-          innerRef={provided.innerRef}
           ref={provided.innerRef}
           {...provided.droppableProps}
           className={
