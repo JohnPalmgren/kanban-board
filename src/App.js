@@ -167,16 +167,22 @@ function App() {
 
 
     if (destinationColumn === "toDo") {
-      setToDo((prevItems) => [beingDragged, ...prevItems]);
+      const newItems = [...toDo]
+      newItems.splice(destination.index, 0, beingDragged);
+      setToDo(newItems);
     }
 
     if (destinationColumn === "inProgress") {
-      setInProgress((prevItems) => [beingDragged, ...prevItems]);
+      const newItems = [...inProgress];
+      newItems.splice(destination.index, 0, beingDragged);
+      setInProgress(newItems);
     }
 
     if (destinationColumn === "done") {
-      setDone((prevItems) => [beingDragged, ...prevItems]);
-    }    
+      const newItems = [...done];
+      newItems.splice(destination.index, 0, beingDragged);
+      setDone(newItems);
+    }
 
   };
 
