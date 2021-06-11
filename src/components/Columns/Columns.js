@@ -26,6 +26,8 @@ const Columns = props => {
       />
 
       <Column
+        setColumnState={props.setColumnState}
+        displayModal={props.displayModal}
         input={props.done}
         title="Done"
         type="done"
