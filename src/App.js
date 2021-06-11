@@ -13,12 +13,15 @@ library.add(fas);
 function App() {
   const [modalVisibility, setModalVisibility] = useState(false);
   const [delModalVisibility, setDelModalVisibility] = useState(false);
+  
   const displayModal = () => {
     setModalVisibility(true);
   };
   const hideModal = () => {
     setModalVisibility(false);
   };
+
+
 
   const [currentColumn, setCurrentColumn] = useState("toDo");
   const [deleteData, setDeleteData] = useState()
@@ -101,6 +104,80 @@ function App() {
   };
 
   const onDragEnd = (result) => {
+    const { destination, source, draggableId } = result;
+
+    if (!destination) {
+      return;
+    }
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
+
+    const sourceColumn = source.droppableId
+    const destinationColumn = destination.droppableId
+
+    let beingDragged
+
+    // remove item from column when dragged
+    
+    if (sourceColumn === "toDo") {
+     
+      const dragObj = toDo.filter(
+        (item) => item.uid === draggableId 
+      )
+      beingDragged = dragObj[0]
+
+      setToDo((prevItems) => {
+        const updatedItems = prevItems.filter(
+          (item) => item.uid !== draggableId
+        );
+        return updatedItems;
+      });
+    }
+
+    if (sourceColumn === "inProgress") {
+
+      const dragObj = inProgress.filter((item) => item.uid === draggableId);
+      beingDragged = dragObj[0];
+
+      setInProgress((prevItems) => {
+        const updatedItems = prevItems.filter(
+          (item) => item.uid !== draggableId
+        );
+        return updatedItems;
+      });
+    }
+
+    if (sourceColumn === "done") {
+
+      const dragObj = done.filter((item) => item.uid === draggableId);
+      beingDragged = dragObj[0];
+
+      setDone((prevItems) => {
+        const updatedItems = prevItems.filter(
+          (item) => item.uid !== draggableId
+        );
+        return updatedItems;
+      });
+    }
+
+
+    if (destinationColumn === "toDo") {
+      setToDo((prevItems) => [beingDragged, ...prevItems]);
+    }
+
+    if (destinationColumn === "inProgress") {
+      setInProgress((prevItems) => [beingDragged, ...prevItems]);
+    }
+
+    if (destinationColumn === "done") {
+      setDone((prevItems) => [beingDragged, ...prevItems]);
+    }    
+
   };
 
 
