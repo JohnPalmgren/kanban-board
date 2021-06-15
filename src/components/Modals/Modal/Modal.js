@@ -17,10 +17,17 @@ const Modal = props => {
       <div className={classes.wrapper}>
         <form onSubmit={getUserInput}>
           <h1 className={classes.heading}>Add a task</h1>
-          <input onChange={setInput} type={"text"} className={classes.input}></input>
+          <input
+            onChange={setInput}
+            type={"text"}
+            className={classes.input}
+            autoFocus
+          ></input>
           <div className={classes.buttonWrapper}>
             <button type={"submit"}>Add</button>
-            <button onClick={clickHandler} type={"button"}>Cancel</button>
+            <button onClick={clickHandler} type={"button"}>
+              Cancel
+            </button>
           </div>
         </form>
       </div>
