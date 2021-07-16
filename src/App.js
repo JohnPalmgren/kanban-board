@@ -1,3 +1,4 @@
+import React from "react"
 import Columns from "./components/Columns/Columns";
 import Heading from "./components/Heading/Heading"
 import ModalDisplay from "./components/Modals/ModalDisplay";
@@ -235,9 +236,10 @@ function App() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <Heading />
       {modalVisibility ? (
+
         <ModalDisplay userInput={userInputHandler} hideModal={hideModal} />
       ) : (
         <div></div>
@@ -261,7 +263,7 @@ function App() {
           delete={displayDelete}
         />
       </DragDropContext>
-    </div>
+    </React.Fragment>
   );
 }
 

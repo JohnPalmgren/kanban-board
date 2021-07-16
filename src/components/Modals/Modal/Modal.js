@@ -1,16 +1,15 @@
 import classes from "../UI/Modal.module.css"
-import { useState } from "react"
+import { useState, useRef } from "react"
 const Modal = props => {
 
-  const [userInput, setUserInput] = useState()
+
+  const userInputs = useRef()
 
   const clickHandler = () => props.hideModal();
 
-  const setInput = event => setUserInput(event.target.value)
-
   const getUserInput = event => {
     event.preventDefault();
-    props.userInput({userInput:userInput, uid:Date.now().toString()})
+    props.userInput({userInput:userInputs.current.value, uid:Date.now().toString()})
   }
 
     return (
@@ -18,10 +17,10 @@ const Modal = props => {
         <form onSubmit={getUserInput}>
           <h1 className={classes.heading}>Add a task</h1>
           <input
-            onChange={setInput}
             type={"text"}
             className={classes.input}
             autoFocus
+            ref={userInputs}
           ></input>
           <div className={classes.buttonWrapper}>
             <button type={"submit"}>Add</button>
