@@ -8,7 +8,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 
-
 library.add(fas);
 
 function App() {

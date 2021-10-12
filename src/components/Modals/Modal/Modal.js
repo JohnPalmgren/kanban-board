@@ -1,5 +1,5 @@
 import classes from "../UI/Modal.module.css"
-import { useState, useRef } from "react"
+import { useRef } from "react"
 const Modal = props => {
 
 
