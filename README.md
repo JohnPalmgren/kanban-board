@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Kanban Board
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+## Overview
 
-## Available Scripts
+![gif of website](./canban.gif)
 
-In the project directory, you can run:
+A react project using `react-beautiful-dnd` to achieve a drag and drop effect. I wanted to build somthing a bit more interesting and complex than a simple to-do list. The `react-beautiful-dnd` package didn't work strait away but there is some good documentation online and I googled my way through it. 
 
-### `yarn start`
+---
+## features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I wanted to create a fully interactive kanban board. I had to be able to: 
 
-### `yarn test`
+- Add a task to any of the columns
+- Re-order tasks within the columns
+- Move tasks between columns
+- Delete tasks with a warning including the task name
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+## Dependencies 
 
-### `yarn build`
+- React Beautiful DND
+- Font Awesome
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+## Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+See the live site [here](https://johnpalmgren.github.io/kanban-board/) 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+## Contact
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Website](http://johnpalmgren.co.uk/)
+- [Github](https://github.com/JohnPalmgren)
+- [Twitter](https://twitter.com/john_palmgren)
